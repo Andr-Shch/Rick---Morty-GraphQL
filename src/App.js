@@ -8,8 +8,11 @@ import './styles/main.style.css'
 function App() {
  
   const {loading, error, data} = useQuery(getAllCharacters, {
-    variables: {page: 1}
+    variables: {
+      page: 1
+    }
   })
+  console.log(data)
  
  if (loading) return <Loader/>
  if (error) return <h1>Opss, something wrong</h1>

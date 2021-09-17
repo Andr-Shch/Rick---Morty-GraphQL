@@ -4,6 +4,9 @@ const getAllCharacters=gql`
  query Character($page: Int){
 
     characters(page:$page){
+        info{
+      next
+    }
   results{
    id
    name
